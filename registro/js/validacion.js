@@ -7,16 +7,8 @@ function showAlertError() {
 }
 
 function validacion(){
-    var nombre = document.getElementById('nombre').value;
-    var apellido = document.getElementById('apellido').value;
-    var email = document.getElementById('email').value;
-    var password1 = document.getElementById('password1').value;
-    var password2 = document.getElementById('password2').value;
-    var terminos = document.getElementById('terminos').value;
-    
-    if(nombre !== '' && apellido !== '' && email!== '' && password1 !== '' && password2 !== '' && password1 === password2 && terminos.checked ){
-         showAlertSuccess()
-    } else {
-        showAlertError()
-    }
-    };
+    if((document.getElementById('nombre').value != ''&& document.getElementById('apellido').value != '' && document.getElementById('email').value != '' && document.getElementById('password1').value != '' && document.getElementById('password2').value != '' && document.getElementById('password1').value.length >=6 && document.getElementById('password1').value === document.getElementById('password2').value && document.getElementById('terminos').checked === true)){
+        showAlertSuccess()
+    } else {showAlertError()}
+};
+
